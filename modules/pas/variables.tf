@@ -40,14 +40,11 @@ variable "dns_suffix" {
   type = "string"
 }
 
-variable "use_route53" {
-}
+variable "use_route53" {}
 
-variable "use_tcp_routes" {
-}
+variable "use_tcp_routes" {}
 
-variable "use_ssh_routes" {
-}
+variable "use_ssh_routes" {}
 
 variable "create_backup_pas_buckets" {
   default = false
@@ -74,11 +71,11 @@ variable "tags" {
 }
 
 module "cidr_lookup" {
-  source = "../calculate_subnets"
+  source   = "../calculate_subnets"
   vpc_cidr = "${var.vpc_cidr}"
 }
 
 locals {
-  pas_cidr      =  "${module.cidr_lookup.pas_cidr}"
-  services_cidr =  "${module.cidr_lookup.services_cidr}"
+  pas_cidr      = "${module.cidr_lookup.pas_cidr}"
+  services_cidr = "${module.cidr_lookup.services_cidr}"
 }

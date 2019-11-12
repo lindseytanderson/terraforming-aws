@@ -42,7 +42,7 @@ variable "tags" {
 }
 
 module "cidr_lookup" {
-  source = "../calculate_subnets"
+  source   = "../calculate_subnets"
   vpc_cidr = "${var.vpc_cidr}"
 }
 

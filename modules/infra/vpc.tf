@@ -29,7 +29,7 @@ resource "aws_security_group" "vms_security_group" {
 }
 
 locals {
-  ec2_address = "com.amazonaws.${var.region}.ec2"
+  ec2_address    = "com.amazonaws.${var.region}.ec2"
   lb_api_address = "com.amazonaws.${var.region}.elasticloadbalancing"
 }
 

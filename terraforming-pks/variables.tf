@@ -108,7 +108,6 @@ variable "tags" {
   description = "Key/value tags to assign to all AWS resources"
 }
 
-
 /*******************************
  * Deprecated, Delete After Next Release *
  *******************************/

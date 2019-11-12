@@ -42,7 +42,7 @@ resource "aws_security_group" "rds_security_group" {
 }
 
 resource "random_string" "rds_password" {
-  count = "${var.rds_instance_count > 0 ? 1 : 0}"
+  count   = "${var.rds_instance_count > 0 ? 1 : 0}"
   length  = 16
   special = false
 }
