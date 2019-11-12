@@ -31,6 +31,20 @@ variable "use_route53" {
 }
 
 /****************
+* PKS *
+*****************/
+
+variable "use_pks_k8s_master_lb" {
+  default     = true
+  description = "Indicate whether or not to enable the public-facing Load Balancer for K8s Master nodes"
+}
+
+variable "use_pks_api_lb" {
+  default     = true
+  description = "Indicate whether or not to enable the public-facing Load Balancer for K8s API nodes"
+}
+
+/****************
 * Ops Manager *
 *****************/
 
