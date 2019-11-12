@@ -1,5 +1,9 @@
-output "load_balancer_name" {
+output "load_balancer_name_api" {
   value = "${aws_lb.pks_api.name}"
+}
+
+output "load_balancer_name_k8s_master" {
+  value = "${aws_lb.pks_k8s_master.name}"
 }
 
 output "pks_api_target_groups" {
@@ -67,4 +71,8 @@ output "pks_master_security_group_id" {
 
 output "pks_api_lb_security_group_id" {
   value = "${aws_security_group.pks_api_lb_security_group.id}"
+}
+
+output "pks_k8s_master_lb_security_group_id" {
+  value = "${aws_security_group.pks_k8s_master_lb_security_group.id}"
 }

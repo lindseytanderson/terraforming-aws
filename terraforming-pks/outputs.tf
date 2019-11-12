@@ -201,6 +201,10 @@ output "pks_api_lb_security_group_id" {
   value = "${module.pks.pks_api_lb_security_group_id}"
 }
 
+output "pks_k8s_master_lb_security_group_id" {
+  value = "${module.pks.pks_k8s_master_lb_security_group_id}"
+}
+
 # PKS Services =================================================================
 
 output "services_subnet_ids" {
